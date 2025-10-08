@@ -92,14 +92,14 @@ The example also automatically accounts for **different task prediction errors, 
 ### Predicted Inputs ☀️🌤️🌦️🌤️🌥️🌦️☀️
 
 #### **1️⃣ Predicted Incoming Solar Power**
-![Predicted Solar Power](pred_power.png)
+![Predicted Solar Power](SampleExampleImages/pred_power.png)
 
 This plot shows the **predicted solar energy input** ($S_t$) at each time slot — representing the renewable power available to the system.
 
 ---
 
 #### **2️⃣ Predicted Task Arrivals and Validity**
-![Predicted Tasks](incomingpredictedtasks.png)
+![Predicted Tasks](SampleExampleImages/incomingpredictedtasks.png)
 
 This figure visualizes the **predicted task arrivals** and their **validity periods** across consecutive slots.  
 - **Dark Blue:** Newly arrived tasks.  
@@ -110,7 +110,7 @@ Each cell represents one task (τ₁, τ₂, …), and the top number shows the 
 ### `Intermediate Step: No-Battery Scheduling`
 
 #### **3️⃣ Algorithm 2 (No Battery): Solar Availability and Scheduled Tasks**
-![Algorithm 2](alg2.png)
+![Algorithm 2](SampleExampleImages/alg2.png)
 
 This is an **intermediate scheduling step** where no battery is used.  
 Tasks are scheduled **only when solar energy is directly available**, ensuring that:
@@ -124,7 +124,7 @@ ___
 ### `Offline Scheduling`
 
 #### **4️⃣ Infinite Battery Case (Offline Scheduling)**
-![Algorithm 4 — Infinite Battery](alg4.png)
+![Algorithm 4 — Infinite Battery](SampleExampleImages/alg4.png)
 
 The **offline schedule for infinite battery (TS-GES-SIB)** assumes that all surplus solar energy can be stored and reused later.  
 This creates a balanced power utilization pattern while ensuring all predicted tasks are scheduled efficiently.
@@ -138,7 +138,7 @@ Since real batteries have limited capacity, we visualize **five different capaci
 
 | 8 Units | 16 Units | 17 Units | 18 Units | 19 Units |
 |:--------:|:---------:|:---------:|:---------:|:---------:|
-| ![8-unit](alg6_8_unit.png) | ![16-unit](alg6_16_unit.png) | ![17-unit](alg6_17_unit.png) | ![18-unit](alg6_18_unit.png) | ![19-unit](alg6_19_unit.png) |
+| ![8-unit](SampleExampleImages/alg6_8_unit.png) | ![16-unit](SampleExampleImages/alg6_16_unit.png) | ![17-unit](SampleExampleImages/alg6_17_unit.png) | ![18-unit](SampleExampleImages/alg6_18_unit.png) | ![19-unit](SampleExampleImages/alg6_19_unit.png) |
 
 Each bar represents the **power consumption at time t ($P_t$)** with corresponding **scheduled tasks and utilization ($U_t$)**.  
 The scheduler optimizes based on available solar energy and the finite storage capacity.
@@ -148,7 +148,7 @@ The scheduler optimizes based on available solar energy and the finite storage c
 ### Actual Scenarios ☀️🌤️☀️🌦️🌤️🌥️🌦️
 
 #### **6️⃣ Actual Solar Power (Infinite Battery Case)**
-![Actual Power Finite](actual_power_finite.png)
+![Actual Power Finite](SampleExampleImages/actual_power_finite.png)
 
 This plot represents the **actual observed solar input** ($S_t$) for the infinite-battery case.  
 It may differ slightly from the predicted curve due to uncertainty or environmental variation.
@@ -158,7 +158,7 @@ It may differ slightly from the predicted curve due to uncertainty or environmen
 ### `Online Scheduling`
 
 #### **7️⃣ Online Scheduling — Infinite Battery**
-![Algorithm 4_5 — Infinite Battery Online](alg4_5.png)
+![Algorithm 4_5 — Infinite Battery Online](SampleExampleImages/alg4_5.png)
 
 This figure shows the **online version** of the infinite-battery case, where scheduling decisions are taken adaptively as actual solar input is revealed in real-time.
 
@@ -167,7 +167,7 @@ This figure shows the **online version** of the infinite-battery case, where sch
 ### Actual Scenarios ☀️🌤️☀️🌦️🌤️🌥️🌦️
 
 #### **8️⃣ Actual Solar Power (Finite Battery Case)**
-![Actual Power Infinite](actual_power_infinite.png)
+![Actual Power Infinite](SampleExampleImages/actual_power_infinite.png)
 
 This figure shows the **actual solar energy availability** for the finite-battery case.  
 Despite variations from the predicted solar profile, the scheduler dynamically handles charging, discharging, and task placement decisions.
@@ -183,7 +183,7 @@ Since real batteries have limited capacity, we visualize **five different capaci
 
 | 8 Units | 16 Units | 17 Units | 18 Units | 19 Units |
 |:--------:|:---------:|:---------:|:---------:|:---------:|
-| ![8-unit](alg6_5_8_unit.png) | ![16-unit](alg6_5_16_unit.png) | ![17-unit](alg6_5_17_unit.png) | ![18-unit](alg6_5_18_unit.png) | ![19-unit](alg6_5_19_unit.png) |
+| ![8-unit](SampleExampleImages/alg6_5_8_unit.png) | ![16-unit](SampleExampleImages/alg6_5_16_unit.png) | ![17-unit](SampleExampleImages/alg6_5_17_unit.png) | ![18-unit](SampleExampleImages/alg6_5_18_unit.png) | ![19-unit](SampleExampleImages/alg6_5_19_unit.png) |
 
 Even with prediction differences and limited battery capacity, the online algorithms efficiently adjust charging/discharging and task scheduling to maintain feasibility.
 
